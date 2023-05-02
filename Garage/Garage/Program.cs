@@ -21,7 +21,7 @@ namespace Garage
 
             Console.Write("Please input number of level: ");
             int level = 1;
-            while(!int.TryParse(Console.ReadLine(), out level))
+            while(!int.TryParse(Console.ReadLine(), out level) || level < 1)
             {
                 Console.Write("Please input valid number of level: ");
             }
@@ -33,13 +33,13 @@ namespace Garage
                 int currentLevel = i + 1;
 
                 Console.Write($"Please input number of car parking lots of level {currentLevel}: ");
-                while(!int.TryParse(Console.ReadLine(), out carParkingLots))
+                while(!int.TryParse(Console.ReadLine(), out carParkingLots) || carParkingLots < 0)
                 {
                     Console.Write($"Please input valid number of car parking lots of level {currentLevel}: ");
                 }
 
                 Console.Write($"Please input number of motobike parking lots of level {currentLevel}: ");
-                while(!int.TryParse(Console.ReadLine(), out motobikeParkingLots))
+                while(!int.TryParse(Console.ReadLine(), out motobikeParkingLots) || motobikeParkingLots < 0)
                 {
                     Console.Write($"Please input valid number of motobike parking lots of level {currentLevel}: ");
                 }
